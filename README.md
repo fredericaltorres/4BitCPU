@@ -3,10 +3,14 @@
 ## Components
 
 1. Register 74LS377 or [74LS273N](http://www.ti.com/lit/ds/symlink/sn74ls273.pdf)
-    - Only the firt 4 bit are used
+    - Only the first 4 bit are used
 2. Adder [74S283](http://www.ti.com/lit/ds/symlink/sn74s283.pdf)
     - The chip is constanstly adding the output of register 1 and 2
 3. 7 Segment Driver [74LS47](http://www.ti.com/lit/ds/symlink/sn74ls47.pdf) - (common annode)
+    - Allow to display the result from register 3, only value 0..9 will be display correctly
+    - Value from 10..15 will display invalid value.
+A driver allowing to support number from 0..15, using hexa decimal value should be used if possible.
+Displaying number 4 bit number on 2 7-segment display is possible but add more in complexity.    
 4. EEPROM to store code [AT28C16](https://www.mouser.com/catalog/specsheets/atmel_doc0540.pdf)
     - A 2k EEPROM only the first 16 byte are use to store the code
     - Contain executable instruction for address 0 to 15
