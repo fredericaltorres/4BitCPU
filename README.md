@@ -14,18 +14,32 @@ Displaying number 4 bit number on 2 7-segment display is possible but add more i
 4. EEPROM to store code [AT28C16](https://www.mouser.com/catalog/specsheets/atmel_doc0540.pdf)
     - A 2k EEPROM only the first 16 byte are use to store the code
     - Contain executable instruction for address 0 to 15
+    - [EEPROM Programmer](https://frederictorres.blogspot.com/2018/06/at28c16-eeprom-programmer.html)
 5. Program counter 4 bit [74LS293](http://www.ti.com/lit/ds/symlink/sn74ls293.pdf)
     Repeat indefinetly execution 0 to 15
 6. Timer 55 for the clock
-7. 1 PNP transistor to reverse to reverse bit 3, of the instruction set
+7. 1 PNP transistor to reverse bit 3, of the instruction set
    to activate the 7 Segment Driver.
 
 - In a first step, I will used an Arduino Mega to simulate 4, 5, 6.
 - In a second step and AT28C16 EEPROM contains 15 instructions from 0..15 will be executed
 undefinetly using a 4 bit counter
 
+
+# Language Machine
+
+Instruction       | Value
+---------------------------------------
+NO_OPERATION      | 0 - 0000
+LOAD_REG_1        | 1 - 0001
+LOAD_REG_2        | 2 - 0010 
+ADD_REGISTERS     | 3 - 0100
+DISPLAY           | 4 - 1000
+---------------------------------------
+
 ## Diagram
 ```
+
 
                             REG 1
 LOAD_REG_1 2               |-----|
