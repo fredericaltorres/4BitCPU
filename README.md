@@ -5,7 +5,7 @@
 1. Register 74LS377 or [74LS273N](http://www.ti.com/lit/ds/symlink/sn74ls273.pdf)
     - Only the firt 4 bit are used
 2. Adder [74S283](http://www.ti.com/lit/ds/symlink/sn74s283.pdf)
-    - 
+    - The chip is constanstly adding the output of register 1 and 2
 3. 7 Segment Driver [74LS47](http://www.ti.com/lit/ds/symlink/sn74ls47.pdf) - (common annode)
 4. EEPROM to store code [AT28C16](https://www.mouser.com/catalog/specsheets/atmel_doc0540.pdf)
     - A 2k EEPROM only the first 16 byte are use to store the code
