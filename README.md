@@ -1,5 +1,10 @@
 # 4 bit CPU with 4 instructions
 
+## Overview
+* A 4 bit CPU, allowing the write program composed of 4 instructions.
+* Add 2 4 bit number and display result.
+* Max size of a program : 16 instructions.
+
 ## Components
 
 1. Register 74LS377 or [74LS273N](http://www.ti.com/lit/ds/symlink/sn74ls273.pdf)
