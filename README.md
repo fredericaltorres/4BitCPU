@@ -36,11 +36,11 @@ undefinetly using a 4 bit counter
 ```
 Instruction       | Value
 ---------------------------------------
-NO_OPERATION      | 0 - 0000
-LOAD_REG_1        | 1 - 0001
-LOAD_REG_2        | 2 - 0010
-ADD_REGISTERS     | 3 - 0100
-DISPLAY           | 4 - 1000
+NO_OPERATION      | 0 - xxxx 0000
+LOAD_REG_1        | 1 - data 0001
+LOAD_REG_2        | 2 - data 0010
+ADD_REGISTERS     | 3 - xxxx 0100
+DISPLAY           | 4 - xxxx 1000
 ---------------------------------------
 ```
 
